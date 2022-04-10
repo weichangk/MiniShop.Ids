@@ -23,16 +23,16 @@
         public string MiniShopWeb_AccessTokenLifetime { get; set; }
         public string MiniShopWeb_AllowedScopes { get; set; }
 
-        public string MiniShopAdminApiResource_Name { get; set; }
-        public string MiniShopAdminApiResource_DisplayName { get; set; }
-        public string MiniShopAdminApiResource_Secret { get; set; }
-        public string MiniShopAdminApiResource_Scopes { get; set; }
+        public string MiniShopPlatformApiResource_Name { get; set; }
+        public string MiniShopPlatformApiResource_DisplayName { get; set; }
+        public string MiniShopPlatformApiResource_Secret { get; set; }
+        public string MiniShopPlatformApiResource_Scopes { get; set; }
 
-        public string MiniShopApiResource_Name { get; set; }
-        public string MiniShopApiResource_DisplayName { get; set; }
-        public string MiniShopApiResource_Secret { get; set; }
-        public string MiniShopApiResource_Scopes { get; set; }
-        public string MiniShopApiResource_UserClaims { get; set; }
+        public string MiniShopBackendApiResource_Name { get; set; }
+        public string MiniShopBackendApiResource_DisplayName { get; set; }
+        public string MiniShopBackendApiResource_Secret { get; set; }
+        public string MiniShopBackendApiResource_Scopes { get; set; }
+        public string MiniShopBackendApiResource_UserClaims { get; set; }
 
         public string UserClaimExtras_Name { get; set; }
         public string UserClaimExtras_DisplayName { get; set; }

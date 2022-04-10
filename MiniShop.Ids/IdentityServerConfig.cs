@@ -24,13 +24,13 @@ namespace MiniShop.Ids
         public static IEnumerable<ApiScope> ApiScopes()
         {
             List<ApiScope> apiScope = new List<ApiScope>();
-            var miniShopApiScopes = BasicSetting.Setting.MiniShopApiResource_Scopes.Split(" ");
+            var miniShopApiScopes = BasicSetting.Setting.MiniShopBackendApiResource_Scopes.Split(" ");
             for (int i = 0; i < miniShopApiScopes.Length; i++)
             {
                 apiScope.Add(new ApiScope {Name = miniShopApiScopes[i] });
             }
 
-            var miniShopAdminApiScopes = BasicSetting.Setting.MiniShopAdminApiResource_Scopes.Split(" ");
+            var miniShopAdminApiScopes = BasicSetting.Setting.MiniShopPlatformApiResource_Scopes.Split(" ");
             for (int i = 0; i < miniShopAdminApiScopes.Length; i++)
             {
                 apiScope.Add(new ApiScope { Name = miniShopAdminApiScopes[i] });
@@ -43,17 +43,17 @@ namespace MiniShop.Ids
         public static IEnumerable<ApiResource> ApiResources =>
         new ApiResource[]
         {
-            new ApiResource(BasicSetting.Setting.MiniShopApiResource_Name, BasicSetting.Setting.MiniShopApiResource_DisplayName)
+            new ApiResource(BasicSetting.Setting.MiniShopBackendApiResource_Name, BasicSetting.Setting.MiniShopBackendApiResource_DisplayName)
             {
-                ApiSecrets = { new Secret(BasicSetting.Setting.MiniShopApiResource_Secret.Sha256()) },
-                Scopes = BasicSetting.Setting.MiniShopApiResource_Scopes.Split(" "),
+                ApiSecrets = { new Secret(BasicSetting.Setting.MiniShopBackendApiResource_Secret.Sha256()) },
+                Scopes = BasicSetting.Setting.MiniShopBackendApiResource_Scopes.Split(" "),
                 //UserClaims = new [] { JwtClaimTypes.Role }
-                UserClaims = BasicSetting.Setting.MiniShopApiResource_UserClaims.Split(" "),
+                UserClaims = BasicSetting.Setting.MiniShopBackendApiResource_UserClaims.Split(" "),
             },
-            new ApiResource(BasicSetting.Setting.MiniShopAdminApiResource_Name, BasicSetting.Setting.MiniShopAdminApiResource_DisplayName)
+            new ApiResource(BasicSetting.Setting.MiniShopPlatformApiResource_Name, BasicSetting.Setting.MiniShopPlatformApiResource_DisplayName)
             {
-                ApiSecrets = { new Secret(BasicSetting.Setting.MiniShopAdminApiResource_Secret.Sha256()) },
-                Scopes = BasicSetting.Setting.MiniShopAdminApiResource_Scopes.Split(" "),
+                ApiSecrets = { new Secret(BasicSetting.Setting.MiniShopPlatformApiResource_Secret.Sha256()) },
+                Scopes = BasicSetting.Setting.MiniShopPlatformApiResource_Scopes.Split(" "),
                 UserClaims = new [] { JwtClaimTypes.Role }
             }
         };
