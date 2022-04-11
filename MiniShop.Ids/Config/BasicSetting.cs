@@ -16,12 +16,12 @@
         public string AssemblyName { get; set; }
 
 
-        public string MiniShopWeb_ApplicationUrl { get; set; }
-        public string MiniShopWeb_ClientId { get; set; }
-        public string MiniShopWeb_ClientName { get; set; }
-        public string MiniShopWeb_ClientSecret { get; set; }
-        public string MiniShopWeb_AccessTokenLifetime { get; set; }
-        public string MiniShopWeb_AllowedScopes { get; set; }
+        public string MiniShopBackendWeb_Url { get; set; }
+        public string MiniShopBackendWeb_Id { get; set; }
+        public string MiniShopBackendWeb_Name { get; set; }
+        public string MiniShopBackendWeb_Secret { get; set; }
+        public string MiniShopBackendWeb_AccessTokenLifetime { get; set; }
+        public string MiniShopBackendWeb_AllowedScopes { get; set; }
 
         public string MiniShopPlatformApiResource_Name { get; set; }
         public string MiniShopPlatformApiResource_DisplayName { get; set; }

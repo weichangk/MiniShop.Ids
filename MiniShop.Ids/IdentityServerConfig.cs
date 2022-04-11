@@ -63,18 +63,18 @@ namespace MiniShop.Ids
         {
             new Client
             {
-                ClientId = BasicSetting.Setting.MiniShopWeb_ClientId,
-                ClientName = BasicSetting.Setting.MiniShopWeb_ClientName,
+                ClientId = BasicSetting.Setting.MiniShopBackendWeb_Id,
+                ClientName = BasicSetting.Setting.MiniShopBackendWeb_Name,
                 AllowedGrantTypes = GrantTypes.CodeAndClientCredentials,
-                ClientSecrets = { new Secret(BasicSetting.Setting.MiniShopWeb_ClientSecret.Sha256()) },
-                RedirectUris = { $"{BasicSetting.Setting.MiniShopWeb_ApplicationUrl}/signin-oidc" },
-                FrontChannelLogoutUri = $"{BasicSetting.Setting.MiniShopWeb_ApplicationUrl}/signout-oidc",
-                PostLogoutRedirectUris = { $"{BasicSetting.Setting.MiniShopWeb_ApplicationUrl}/signout-callback-oidc" },
+                ClientSecrets = { new Secret(BasicSetting.Setting.MiniShopBackendWeb_Secret.Sha256()) },
+                RedirectUris = { $"{BasicSetting.Setting.MiniShopBackendWeb_Url}/signin-oidc" },
+                FrontChannelLogoutUri = $"{BasicSetting.Setting.MiniShopBackendWeb_Url}/signout-oidc",
+                PostLogoutRedirectUris = { $"{BasicSetting.Setting.MiniShopBackendWeb_Url}/signout-callback-oidc" },
                 AlwaysIncludeUserClaimsInIdToken = true,
                 RequireConsent = false,
                 AllowOfflineAccess = true,
-                AccessTokenLifetime = int.Parse(BasicSetting.Setting.MiniShopWeb_AccessTokenLifetime),
-                AllowedScopes = BasicSetting.Setting.MiniShopWeb_AllowedScopes.Split(" "),
+                AccessTokenLifetime = int.Parse(BasicSetting.Setting.MiniShopBackendWeb_AccessTokenLifetime),
+                AllowedScopes = BasicSetting.Setting.MiniShopBackendWeb_AllowedScopes.Split(" "),
             }
         };
     }
