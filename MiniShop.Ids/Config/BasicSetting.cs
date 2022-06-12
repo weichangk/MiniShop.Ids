@@ -23,6 +23,12 @@
         public string MiniShopBackendWeb_AccessTokenLifetime { get; set; }
         public string MiniShopBackendWeb_AllowedScopes { get; set; }
 
+        public string MiniShopFrontendClient_Id { get; set; }
+        public string MiniShopFrontendClient_Name { get; set; }
+        public string MiniShopFrontendClient_Secret { get; set; }
+        public string MiniShopFrontendClient_AccessTokenLifetime { get; set; }
+        public string MiniShopFrontendClient_AllowedScopes { get; set; }
+
         public string MiniShopPlatformApiResource_Name { get; set; }
         public string MiniShopPlatformApiResource_DisplayName { get; set; }
         public string MiniShopPlatformApiResource_Secret { get; set; }

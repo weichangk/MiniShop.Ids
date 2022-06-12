@@ -75,7 +75,20 @@ namespace MiniShop.Ids
                 AllowOfflineAccess = true,
                 AccessTokenLifetime = int.Parse(BasicSetting.Setting.MiniShopBackendWeb_AccessTokenLifetime),
                 AllowedScopes = BasicSetting.Setting.MiniShopBackendWeb_AllowedScopes.Split(" "),
-            }
+            },
+            // wpf client, password grant
+            new Client
+            {
+                ClientId = BasicSetting.Setting.MiniShopFrontendClient_Id,
+                ClientName = BasicSetting.Setting.MiniShopFrontendClient_Name,
+                AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
+                ClientSecrets = { new Secret(BasicSetting.Setting.MiniShopFrontendClient_Secret.Sha256()) },
+                AlwaysIncludeUserClaimsInIdToken = true,
+                RequireConsent = false,
+                AllowOfflineAccess = true,
+                AccessTokenLifetime = int.Parse(BasicSetting.Setting.MiniShopFrontendClient_AccessTokenLifetime),
+                AllowedScopes = BasicSetting.Setting.MiniShopFrontendClient_AllowedScopes.Split(" "),
+            },
         };
     }
 }
